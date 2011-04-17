@@ -1,0 +1,7 @@
+name: SuperPick
+main: com.shankshock.SuperPick.SuperPick
+version: 1.00
+commands:
+  Super:
+    description: Activates one hit KO's.
+    usage: usage /super to enable/disable.
