@@ -2,6 +2,7 @@ package com.shankshock.SuperPick;
 
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
+import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.event.block.BlockDamageEvent;
 import org.bukkit.event.block.BlockListener;
 import org.bukkit.plugin.Plugin;
@@ -20,7 +21,7 @@ public class SuperPickBlockListener extends BlockListener {
     	Player p = event.getPlayer();
     	Material h = p.getItemInHand().getType();
     	Material b = event.getBlock().getType();
-    	if( Plugin.Permissions.Security(.ply, "permission.super") &&
+    	if( Plugin.Permissions.Security( p, "SuperPick.super") &&
     			plugin.users.containsKey( p ) && plugin.users.get( p )
     			&& b != Material.BEDROCK
     			&& (h == Material.DIAMOND_PICKAXE || h == Material.GOLD_PICKAXE ||
