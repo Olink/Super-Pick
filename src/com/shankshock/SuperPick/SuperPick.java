@@ -2,6 +2,7 @@ package com.shankshock.SuperPick;
 
 import java.util.HashMap;
 
+import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
@@ -33,7 +34,7 @@ public class SuperPick extends JavaPlugin
 					else
 						status = true;
 					users.put( ply, status );
-					ply.sendMessage( "Status of Super Pick:" + status );
+					ply.sendMessage(ChatColor.AQUA + "Status of Super Pick: " + status );
 				}
 				else
 				{
