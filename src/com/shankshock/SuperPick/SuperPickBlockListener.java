@@ -2,18 +2,19 @@ package com.shankshock.SuperPick;
 
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.EventPriority;
+import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockDamageEvent;
-import org.bukkit.event.block.BlockListener;
 
-import com.shankshock.SuperPick.SuperPick;
-
-public class SuperPickBlockListener extends BlockListener {
+public class SuperPickBlockListener implements Listener {
     private final SuperPick plugin;
     
     public SuperPickBlockListener(SuperPick instance) {
         plugin = instance;
     }
     
+    @EventHandler(priority = EventPriority.HIGH)
     public void onBlockDamage( BlockDamageEvent event )
     {
     	Player p = event.getPlayer();
